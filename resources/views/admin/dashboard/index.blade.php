@@ -16,7 +16,7 @@
                                         <a href="index.html">Home</a>
                                     </li>
                                     <li class="breadcrumb-item active" aria-current="page">
-                                        DataTable
+                                        {{ Request::segment(2) }}
                                     </li>
                                 </ol>
                             </nav>
@@ -32,13 +32,14 @@
                             <thead>
                                 <tr>
                                     <th class="table-plus">#</th>
-                                    <th class="datatable-nosort">Hero Title</th>
                                     <th class="datatable-nosort">Hero Subtitle</th>
-                                    <th class="datatable-nosort">Hero Image</th>
                                     <th class="datatable-nosort">About Title</th>
                                     <th class="datatable-nosort">About Content</th>
                                     <th class="datatable-nosort">About Image</th>
                                     <th class="datatable-nosort">Contact Title</th>
+                                    <th class="datatable-nosort">Contact Phone</th>
+                                    <th class="datatable-nosort">Contact Email</th>
+                                    <th class="datatable-nosort">Contact Address</th>
                                     <th class="datatable-nosort">Option</th>
                                 </tr>
                             </thead>
@@ -47,16 +48,15 @@
                                     <tr>
                                         <th scope="row">{{ $loop->iteration }}</td>
                                         <td>{{ $d->herosubtitle }}</td>
-                                        <td>{{ $d->herotitle }}</td>
-                                                                                <td>
-                                            <img src="{{ Storage::url($d->heroimage) }}" alt="" width="50px">
-                                        </td>
                                         <td>{{ $d->abouttitle }}</td>
                                         <td>{{ $d->abouttext }}</td>
                                                                               <td>
                                             <img src="{{ Storage::url($d->aboutimage) }}" alt="" width="50px">
                                         </td>
                                         <td>{{ $d->contacttitle }}</td>
+                                        <td>{{ $d->phone }}</td>
+                                        <td>{{ $d->email }}</td>
+                                        <td>{{ $d->address }}</td>
                                         <td>
                                             <div class="dropdown">
                                                 <a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle"

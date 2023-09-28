@@ -8,7 +8,7 @@
                     <div class="row">
                         <div class="col-md-6 col-sm-12">
                             <div class="title">
-                                <h4>TEdit Data Dashboard</h4>
+                                <h4>Edit Data Dashboard</h4>
                             </div>
                             <nav aria-label="breadcrumb" role="navigation">
                                 <ol class="breadcrumb">
@@ -22,7 +22,7 @@
                             </nav>
                         </div>
                         <div class="col-md-6 col-sm-12 text-right">
-                            <a href="{{ route('article.index') }}" class="btn btn-primary">Kembali</a>
+                            <a href="{{ route('dashboard.index') }}" class="btn btn-primary">Kembali</a>
                         </div>
                     </div>
                 </div>
@@ -46,21 +46,6 @@
                         <label for="herosubtitle" class="form-label">Subtitle Hero</label>
                         <input class="form-control" type="text" id="herosubtitle" name="herosubtitle"
                             placeholder="Masukkan Subtitle Hero" value="{{ $data->herosubtitle }}" />
-                    </div>
-
-                    <div class="form-group">
-                        <label for="herotitle" class="form-label">Judul Hero</label>
-                        <input class="form-control" type="text" id="herotitle" name="herotitle"
-                            placeholder="Masukkan Judul Hero" value="{{ $data->herotitle }}" />
-                    </div>
-
-                    <div class="form-group">
-                        <label for="heroimage" class="form-label">Gambar Hero</label>
-                        <div class="custom-file">
-                            <input type="file" class="custom-file-input form-control" id="heroimage" name="heroimage"
-                                required />
-                            <label class="custom-file-label">Pilih file</label>
-                        </div>
                     </div>
 
                     <div class="form-group">

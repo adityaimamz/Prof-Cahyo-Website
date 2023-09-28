@@ -16,7 +16,7 @@
                                         <a href="index.html">Home</a>
                                     </li>
                                     <li class="breadcrumb-item active" aria-current="page">
-                                        DataTable
+                                        {{ Request::segment(2) }}
                                     </li>
                                 </ol>
                             </nav>
