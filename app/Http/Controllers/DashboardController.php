@@ -55,19 +55,6 @@ class DashboardController extends Controller
      */
      public function update(Request $request, $id)
     {
-        // Validasi request jika diperlukan
-
-        // Lokasi penyimpanan file gambar
-        $pathHero = 'Gambar_Hero';
-        $pathAbout = 'Gambar_About';
-
-        // Mengunggah file gambar hero
-        $heroImage = $request->file('heroimage');
-        Storage::putFileAs($pathHero, $heroImage, $heroImage->getClientOriginalName());
-
-        // Mengunggah file gambar about
-        $aboutImage = $request->file('aboutimage');
-        Storage::putFileAs($pathAbout, $aboutImage, $aboutImage->getClientOriginalName());
 
         // Data yang akan diupdate
         $data = [
