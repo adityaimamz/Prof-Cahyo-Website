@@ -72,11 +72,8 @@ class DashboardController extends Controller
         // Data yang akan diupdate
         $data = [
             'herosubtitle' => $request->herosubtitle,
-            'herotitle' => $request->herotitle,
-            'heroimage' => $pathHero . "/" . $heroImage->getClientOriginalName(),
             'abouttitle' => $request->abouttitle,
             'abouttext' => $request->abouttext,
-            'aboutimage' => $pathAbout . "/" . $aboutImage->getClientOriginalName(),
             'contacttitle' => $request->contacttitle,
             'email' => $request->email,
             'phone' => $request->phone,

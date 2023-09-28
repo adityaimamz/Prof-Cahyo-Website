@@ -61,15 +61,6 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="aboutimage" class="form-label">Gambar About</label>
-                        <div class="custom-file">
-                            <input type="file" class="custom-file-input form-control" id="aboutimage" name="aboutimage"
-                                required />
-                            <label class="custom-file-label">Pilih file</label>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
                         <label for="contacttitle" class="form-label">Judul Kontak</label>
                         <input class="form-control" type="text" id="contacttitle" name="contacttitle"
                             placeholder="Masukkan Judul Kontak" value="{{ $data->contacttitle }}" />

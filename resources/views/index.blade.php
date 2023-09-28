@@ -44,17 +44,17 @@
                     <div class="col-lg-5" style="min-height: 500px;">
                         <div class="position-relative h-100">
                             <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s"
-                                src="{{ Storage::url($item->aboutimage) }}" style="object-fit: cover;">
+                                src="img/about.jpg" style="object-fit: cover;">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s" id="contact">
+        <div class="container-fluid py-5 wow fadeInUp" style="background-color: rgba(51, 124, 207)" data-wow-delay="0.1s" id="contact">
             <div class="container py-5">
                 <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
                     <h5 class="fw-bold text-primary text-uppercase">Kontak</h5>
-                    <h1 class="mb-0">{{ $item->contacttitle }}</h1>
+                    <h1 class="mb-0 text-white">{{ $item->contacttitle }}</h1>
                 </div>
                 <div class="row g-5 mb-5">
                     <div class="col-lg-4">
@@ -64,7 +64,7 @@
                                 <i class="fa fa-phone-alt text-white"></i>
                             </div>
                             <div class="ps-4">
-                                <h5 class="mb-2">
+                                <h5 class="mb-2 text-white">
                                     Nomor Telepon</h5>
                                 <h4 class="text-primary mb-0">{{ $item->phone }}</h4>
                             </div>
@@ -77,7 +77,7 @@
                                 <i class="fa fa-envelope-open text-white"></i>
                             </div>
                             <div class="ps-4">
-                                <h5 class="mb-2">Email</h5>
+                                <h5 class="mb-2 text-white">Email</h5>
                                 <h4 class="text-primary mb-0">{{ $item->email }}</h4>
                             </div>
                         </div>
@@ -89,7 +89,7 @@
                                 <i class="fa fa-map-marker-alt text-white"></i>
                             </div>
                             <div class="ps-4">
-                                <h5 class="mb-2">Kantor</h5>
+                                <h5 class="mb-2 text-white">Kantor</h5>
                                 <h4 class="text-primary mb-0">{{ $item->address }}</h4>
                             </div>
                         </div>

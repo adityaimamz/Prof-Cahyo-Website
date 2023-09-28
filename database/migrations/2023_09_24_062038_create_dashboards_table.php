@@ -16,7 +16,6 @@ return new class extends Migration
             $table->string('herosubtitle');
             $table->string('abouttitle');
             $table->string('abouttext');
-            $table->string('aboutimage');
             $table->string('contacttitle');
             $table->string('email');
             $table->string('phone');

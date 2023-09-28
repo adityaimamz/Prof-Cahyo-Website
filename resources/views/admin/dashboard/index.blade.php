@@ -35,7 +35,6 @@
                                     <th class="datatable-nosort">Hero Subtitle</th>
                                     <th class="datatable-nosort">About Title</th>
                                     <th class="datatable-nosort">About Content</th>
-                                    <th class="datatable-nosort">About Image</th>
                                     <th class="datatable-nosort">Contact Title</th>
                                     <th class="datatable-nosort">Contact Phone</th>
                                     <th class="datatable-nosort">Contact Email</th>
@@ -50,9 +49,6 @@
                                         <td>{{ $d->herosubtitle }}</td>
                                         <td>{{ $d->abouttitle }}</td>
                                         <td>{{ $d->abouttext }}</td>
-                                                                              <td>
-                                            <img src="{{ Storage::url($d->aboutimage) }}" alt="" width="50px">
-                                        </td>
                                         <td>{{ $d->contacttitle }}</td>
                                         <td>{{ $d->phone }}</td>
                                         <td>{{ $d->email }}</td>
