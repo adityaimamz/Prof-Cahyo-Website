@@ -30,10 +30,11 @@ Route::get('/blog', function () {
 
 Route::get('/blog/detail/{slug}', function ($slug) {
     $article = article::where('slug', $slug)->first();
-    $articles = article::all();
+    $articles = article::where('id', '!=', $slug)->paginate(4);
     return view('detail-article', [
         'article' => $article,
         'articles' => $articles,
+        'title' => 'Artikel',
     ]);
 });
 

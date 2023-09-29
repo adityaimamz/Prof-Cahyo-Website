@@ -36,7 +36,7 @@
                                         <h4 class="mb-3">{{ $article->judul }}</h4>
                                         <p> {{ substr($article->meta_deskripsi, 0, 120) }}{{ strlen($article->meta_deskripsi) > 120 ? '...' : '' }}
                                         </p>
-                                        <a class="text-uppercase" href="/detail/{{ $article->slug }}">Read More <i
+                                        <a class="text-uppercase" href="/blog/detail/{{ $article->slug }}">Read More <i
                                                 class="bi bi-arrow-right"></i></a>
                                     </div>
                                 </div>

@@ -37,7 +37,7 @@ class ArticleController extends Controller
         Storage::putFileAs($path, $file, $file->getClientOriginalName());
 
         article::create([
-             'judul' => $request->judul,
+            'judul' => $request->judul,
             'slug' => Str::slug($request->judul, '-'),
             'meta_judul' => $request->meta_judul,
             'meta_deskripsi' => $request->meta_deskripsi,
@@ -76,7 +76,7 @@ class ArticleController extends Controller
         Storage::putFileAs($path, $file, $file->getClientOriginalName());
 
         $data = [
-                        'judul' => $request->judul,
+            'judul' => $request->judul,
             'slug' => Str::slug($request->judul, '-'),
             'meta_judul' => $request->meta_judul,
             'meta_deskripsi' => $request->meta_deskripsi,
