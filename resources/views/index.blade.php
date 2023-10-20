@@ -22,7 +22,7 @@
                     </div>
                     <div class="col-sm-12 col-md-6 d-none d-md-block wow slideInRight" data-wow-delay="0.9s">
                         <div class="hero-image">
-                            <img src="img/hero.png" alt="Hero Image">
+                            <img src="{{ Storage::url($item->heroimage) }}" style="max-height: 500px; max-width: 500px; width: auto; height: auto" alt="Hero Image">
                         </div>
                     </div>
                 </div>
