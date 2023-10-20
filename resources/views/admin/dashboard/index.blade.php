@@ -33,7 +33,6 @@
                                 <tr>
                                     <th class="table-plus">#</th>
                                     <th class="datatable-nosort">Hero Subtitle</th>
-                                    <th class="datatable-nosort">Hero Image</th>
                                     <th class="datatable-nosort">About Title</th>
                                     <th class="datatable-nosort">About Content</th>
                                     <th class="datatable-nosort">Contact Title</th>
@@ -48,9 +47,6 @@
                                     <tr>
                                         <th scope="row">{{ $loop->iteration }}</td>
                                         <td>{{ $d->herosubtitle }}</td>
-                                        <td>
-                                            <img src="{{ Storage::url($d->heroimage) }}" alt="" width="50px">
-                                        </td>
                                         <td>{{ $d->abouttitle }}</td>
                                         <td>{{ $d->abouttext }}</td>
                                         <td>{{ $d->contacttitle }}</td>

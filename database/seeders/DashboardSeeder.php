@@ -14,7 +14,6 @@ class DashboardSeeder extends Seeder
     {
         Dashboard::create([
             'herosubtitle' => 'Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.',
-            'heroimage' => 'Hero_image.jpg',
             'abouttitle' => 'Dr. Cahyo Budi Utomo, M.Pd',
             'abouttext' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, natus.',
             'contacttitle' => 'Hubungi saya',

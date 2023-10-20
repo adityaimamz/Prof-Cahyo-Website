@@ -53,21 +53,12 @@ class DashboardController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, $id)
+     public function update(Request $request, $id)
     {
-        // Validasi request jika diperlukan
-
-        // Lokasi penyimpanan file gambar
-        $pathHero = 'Gambar_Hero';
-
-        // Mengunggah file gambar hero
-        $heroImage = $request->file('heroimage');
-        Storage::putFileAs($pathHero, $heroImage, $heroImage->getClientOriginalName());
 
         // Data yang akan diupdate
         $data = [
             'herosubtitle' => $request->herosubtitle,
-            'heroimage' => $pathHero . "/" . $heroImage->getClientOriginalName(),
             'abouttitle' => $request->abouttitle,
             'abouttext' => $request->abouttext,
             'contacttitle' => $request->contacttitle,
@@ -82,7 +73,6 @@ class DashboardController extends Controller
         // Redirect ke halaman dashboard atau rute yang sesuai
         return redirect()->route('dashboard.index');
     }
-
 
 
     /**

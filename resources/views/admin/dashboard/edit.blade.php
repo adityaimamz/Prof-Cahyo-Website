@@ -47,14 +47,7 @@
                         <input class="form-control" type="text" id="herosubtitle" name="herosubtitle"
                             placeholder="Masukkan Subtitle Hero" value="{{ $data->herosubtitle }}" />
                     </div>
-                    <div class="form-group">
-                        <label for="aboutimage" class="form-label">Gambar Hero</label>
-                        <div class="custom-file">
-                            <input type="file" class="custom-file-input form-control" id="heroimage" name="heroimage"
-                                required />
-                            <label class="custom-file-label">Pilih file</label>
-                        </div>
-                    </div>
+
                     <div class="form-group">
                         <label for="abouttitle" class="form-label">Judul About</label>
                         <input class="form-control" type="text" id="abouttitle" name="abouttitle"

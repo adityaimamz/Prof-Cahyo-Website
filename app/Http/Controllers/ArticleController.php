@@ -34,21 +34,36 @@ class ArticleController extends Controller
     {
         $path = 'Gambar_Article';
         $file = $request->file('gambar');
-        $fileName = $file->getClientOriginalName();
+        Storage::putFileAs($path, $file, $file->getClientOriginalName());
 
-        // Upload the file to the public/uploads directory
-        $file->move(public_path('uploads'), $fileName);
-
-        Article::create([
+        article::create([
             'judul' => $request->judul,
             'slug' => Str::slug($request->judul, '-'),
             'meta_judul' => $request->meta_judul,
             'meta_deskripsi' => $request->meta_deskripsi,
             'konten' => $request->konten,
-            'gambar' => $path . '/' . $fileName,
+            'gambar' => $path . "/" . $file->getClientOriginalName(),
         ]);
 
         return redirect()->route('article.index');
+    }
+
+    /**
+     * Display the specified resource.
+     */
+    public function show(string $id)
+    {
+        $data = article::where('slug', $id)->first();
+        return view('admin.article.show', ['data' => $data]);
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(string $id)
+    {
+        $data = article::where('id', $id)->first();
+        return view('admin.article.edit', ['data' => $data]);
     }
 
     /**
@@ -58,10 +73,7 @@ class ArticleController extends Controller
     {
         $path = 'Gambar_Article';
         $file = $request->file('gambar');
-        $fileName = $file->getClientOriginalName();
-
-        // Upload the file to the public/uploads directory
-        $file->move(public_path('uploads'), $fileName);
+        Storage::putFileAs($path, $file, $file->getClientOriginalName());
 
         $data = [
             'judul' => $request->judul,
@@ -69,13 +81,13 @@ class ArticleController extends Controller
             'meta_judul' => $request->meta_judul,
             'meta_deskripsi' => $request->meta_deskripsi,
             'konten' => $request->konten,
-            'gambar' => $path . '/' . $fileName,
+            'gambar' => $path . "/" . $file->getClientOriginalName(),
         ];
-
-        Article::where('id', $id)->update($data);
+        $data = article::where('id', $id)->update($data);
 
         return redirect()->route('article.index');
     }
+
     /**
      * Remove the specified resource from storage.
      */

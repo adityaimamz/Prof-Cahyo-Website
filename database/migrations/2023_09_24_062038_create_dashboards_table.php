@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('dashboards', function (Blueprint $table) {
             $table->id();
             $table->string('herosubtitle');
-            $table->string('heroimage');
             $table->string('abouttitle');
             $table->string('abouttext');
             $table->string('contacttitle');
